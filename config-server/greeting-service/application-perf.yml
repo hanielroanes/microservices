@@ -10,5 +10,5 @@ management:
           - '*'
 
 greeting-service:
-  greeting: 'Perf-test-update'
+  greeting: 'Perf'
   default_value: 'Mundo'
