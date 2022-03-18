@@ -4,6 +4,16 @@ server:
 spring:
   application:
     name: config-server
-  profiles:
-    active:
-      - native
+#  profiles:     para rodar pegando as configs locais
+#    active:
+#      - native
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/hanielroanes/microservices-curso-erudio/tree/main/config-server
+          default-label: main
+          search-paths:
+            - 'greeting-service*'
+#          username: user
+#          password: pass
