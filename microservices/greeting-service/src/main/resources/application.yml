@@ -1,6 +1,14 @@
+server:
+  port: 8080
+
 spring:
   application:
     name: greeting-service
+  config:
+    import: optional:configserver:http://localhost:8888/
+  cloud:
+    config:
+      profile: perf
 
 management:
   endpoints:
@@ -10,5 +18,5 @@ management:
           - '*'
 
 greeting-service:
-  greeting: 'Olá'
+  greeting: 'Olï¿½'
   default_value: 'Mundo'
